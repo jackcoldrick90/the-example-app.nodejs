@@ -27,6 +27,7 @@ const { translate } = require('../i18n/i18n')
 module.exports.getCourses = async (request, response, next) => {
   // Get all the entries of content type course
   let courses = []
+  
   let categories = []
   courses = await getCourses(response.locals.currentLocale.code, response.locals.currentApi.id)
   // Attach entry state flags when using preview API
